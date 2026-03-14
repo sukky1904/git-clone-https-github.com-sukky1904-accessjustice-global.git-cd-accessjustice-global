@@ -1,0 +1,144 @@
+{
+  "project_name": "AccessJustice.Global",
+  "design_philosophy": {
+    "vibe": "Modern Justice Tech",
+    "core_principles": [
+      "Trust & Authority (Legal)",
+      "Accessibility & Clarity (Citizen-First)",
+      "Innovation (AI-Powered)",
+      "Global Inclusivity (Africa Focus)"
+    ],
+    "emotional_tone": "Empowering, Serious but Approachable, Secure, Cutting-Edge"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Playfair Display, serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-6xl font-bold tracking-tight leading-tight",
+      "h2": "text-3xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body_lg": "text-lg md:text-xl leading-relaxed",
+      "body_base": "text-base leading-relaxed text-gray-600 dark:text-gray-300",
+      "caption": "text-sm text-gray-500 uppercase tracking-widest"
+    },
+    "guidance": "Use Playfair Display for all major headings to establish legal authority. Use Inter for all UI elements, forms, and long-form text for maximum readability."
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "DEFAULT": "#047A6C",
+        "foreground": "#FFFFFF",
+        "hover": "#036459",
+        "light": "#E0F2F1"
+      },
+      "secondary": {
+        "DEFAULT": "#E5C67A",
+        "foreground": "#0A0A0A",
+        "hover": "#D4B365",
+        "muted": "#F9F3E5"
+      },
+      "accent": {
+        "silver": "#C9D1D9",
+        "tech_green": "#10B981"
+      },
+      "neutral": {
+        "black": "#0A0A0A",
+        "dark_grey": "#1F2937",
+        "light_grey": "#F3F4F6",
+        "white": "#FFFFFF"
+      },
+      "background": {
+        "light": "#FFFFFF",
+        "dark": "#0A0A0A",
+        "subtle": "#F8FAFC"
+      }
+    },
+    "usage_rules": [
+      "Use Emerald (#047A6C) for primary actions (Buttons, Links) and brand identity.",
+      "Use Gold (#E5C67A) sparingly for 'Premium' or 'High Value' items (Lawyer Badges, Success Metrics).",
+      "Use Black (#0A0A0A) for high-contrast text and strong borders.",
+      "Use Silver (#C9D1D9) for subtle dividers and tech-inspired borders.",
+      "NEVER use gradients on text unless it's a very subtle Gold shimmer on dark backgrounds."
+    ]
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#047A6C] text-white hover:bg-[#036459] rounded-md px-6 py-3 font-medium transition-all shadow-md hover:shadow-lg",
+      "secondary": "bg-[#E5C67A] text-black hover:bg-[#D4B365] rounded-md px-6 py-3 font-medium transition-all",
+      "outline": "border-2 border-[#047A6C] text-[#047A6C] hover:bg-[#047A6C] hover:text-white rounded-md px-6 py-3 font-medium transition-all",
+      "ghost": "text-gray-600 hover:text-[#047A6C] hover:bg-gray-100 rounded-md px-4 py-2"
+    },
+    "cards": {
+      "style": "bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300",
+      "feature_highlight": "border-t-4 border-t-[#E5C67A]",
+      "glass": "bg-white/80 dark:bg-black/60 backdrop-blur-md border border-white/20 shadow-xl"
+    },
+    "inputs": {
+      "style": "bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-md px-4 py-3 focus:ring-2 focus:ring-[#047A6C] focus:border-transparent transition-all placeholder:text-gray-400"
+    },
+    "badges": {
+      "style": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium",
+      "trust": "bg-[#E0F2F1] text-[#047A6C]",
+      "premium": "bg-[#F9F3E5] text-[#856404]"
+    }
+  },
+  "layout_strategies": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_spacing": "py-16 md:py-24",
+    "grid_system": {
+      "features": "grid grid-cols-1 md:grid-cols-3 gap-8",
+      "bento": "grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[minmax(200px,auto)]"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": "shadow-[0_4px_20px_-2px_rgba(0,0,0,0.1)]",
+    "borders": "border border-gray-100 dark:border-zinc-800",
+    "glassmorphism": "backdrop-blur-xl bg-white/70 dark:bg-black/60",
+    "gradients": {
+      "hero_overlay": "bg-gradient-to-r from-[#047A6C]/90 to-[#0A0A0A]/80",
+      "subtle_glow": "bg-gradient-to-tr from-[#E5C67A]/10 to-transparent"
+    }
+  },
+  "image_assets": {
+    "hero_lawyer": {
+      "url": "https://images.unsplash.com/photo-1758519290830-5462f4924bb5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwbGF3eWVyJTIwY29uc3VsdGluZyUyMGNsaWVudCUyMG1vZGVybiUyMG9mZmljZXxlbnwwfHx8fDE3NzM0OTEwNzd8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Professional lawyer consulting a client in a modern office",
+      "usage": "Hero section or 'For Lawyers' page header"
+    },
+    "community_justice": {
+      "url": "https://images.unsplash.com/photo-1591672366177-3b6119b143ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwZ2xvYmFsJTIwY29tbXVuaXR5JTIwanVzdGljZSUyMGdhdGhlcmluZ3xlbnwwfHx8fDE3NzM0OTEwNzh8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Diverse community gathering for justice",
+      "usage": "Impact Stories or 'About Us' section"
+    },
+    "tech_abstract": {
+      "url": "https://images.unsplash.com/photo-1626788134911-03f0fb1a143a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxzdWJ0bGUlMjBhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrJTIwbGluZXMlMjBicmlnaHR8ZW58MHx8fHwxNzczNDkxMDc5fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract green tech network lines",
+      "usage": "Background overlay for AI Assistant or 'How it Works' section"
+    },
+    "legal_documents": {
+      "url": "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxsZWdhbCUyMGRvY3VtZW50cyUyMHBlbiUyMGRlc2slMjBjbG9zZSUyMHVwJTIwbWluaW1hbGlzdHxlbnwwfHx8fDE3NzM0OTEwOTR8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Minimalist legal document on desk",
+      "usage": "Legal Templates section or icon placeholder"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Prioritize MOBILE-FIRST responsiveness. Most users will access via phone.",
+    "Use 'Playfair Display' for Headings (h1, h2) and 'Inter' for Body text. Import these fonts via Google Fonts in index.html.",
+    "Ensure high contrast for accessibility (WCAG AA). Emerald text on white background must be readable.",
+    "Implement the 'Justice Wallet' section with a distinct Gold accent to signify value/finance.",
+    "The AI Assistant Chat should feel friendly but authoritative. Use a clean, card-based interface for messages.",
+    "Use 'lucide-react' for icons (Scale, Gavel, Shield, User, FileText, etc.).",
+    "Avoid full-screen gradients. Use subtle textures or the provided 'tech_abstract' image with low opacity.",
+    "Navigation: Sticky header with 'Get Help' (Emerald Button) and 'For Lawyers' (Gold Outline/Text) as key CTAs."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts. Use asymmetrical grids where possible.",
+    "Add 'data-testid' to all interactive elements.",
+    "Use 'sonner' for toast notifications.",
+    "Ensure all images have proper alt text for accessibility.",
+    "Do not use 'transition: all'. Animate specific properties (transform, opacity, colors)."
+  ]
+}
