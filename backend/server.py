@@ -400,6 +400,15 @@ If unclear, ask for their location to provide more relevant information."""
     if chat_request.topic:
         system_message += f"\n\nThe user has selected the topic: {chat_request.topic}. Focus your response on this area."
     
+    # Build conversation context from history
+    if history:
+        conversation_context = "\n\n--- Previous conversation ---\n"
+        for msg in history[-10:]:  # Last 10 messages for context
+            role_label = "User" if msg["role"] == "user" else "Assistant"
+            conversation_context += f"{role_label}: {msg['content']}\n\n"
+        conversation_context += "--- End of previous conversation ---\n\n"
+        system_message += conversation_context
+    
     # Initialize AI chat
     api_key = os.environ.get('EMERGENT_LLM_KEY')
     chat = LlmChat(
@@ -407,13 +416,6 @@ If unclear, ask for their location to provide more relevant information."""
         session_id=session_id,
         system_message=system_message
     ).with_model("openai", "gpt-5.2")
-    
-    # Add history to chat context
-    for msg in history:
-        if msg["role"] == "user":
-            chat.add_user_message(msg["content"])
-        else:
-            chat.add_assistant_message(msg["content"])
     
     # Create user message
     user_message = UserMessage(text=chat_request.message)
@@ -575,6 +577,10 @@ async def register_as_lawyer(lawyer_data: LawyerCreate, request: Request):
         {"user_id": user["user_id"]},
         {"$set": {"role": "lawyer"}}
     )
+    
+    # Remove _id if present before returning
+    if "_id" in lawyer_doc:
+        del lawyer_doc["_id"]
     
     return {"message": "Lawyer registration submitted for verification", "profile": lawyer_doc}
 
