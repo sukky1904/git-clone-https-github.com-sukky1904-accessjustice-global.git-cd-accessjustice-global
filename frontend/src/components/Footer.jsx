@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Globe, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Mail, MapPin, Globe, Instagram, Facebook, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,6 +53,12 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-[#047A6C]" />
+                  <a href="https://wa.me/2348114445557" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    +234 811 444 5557 (WhatsApp)
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-[#047A6C]" />
                   <span>Global Operations</span>
                 </div>
@@ -88,13 +94,10 @@ const Footer = () => {
               © {currentYear} AccessJustice.Global. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-gray-500 hover:text-[#047A6C] transition-colors" aria-label="Twitter">
-                <Twitter className="w-5 h-5" />
+              <a href="https://instagram.com/accessjustice.global" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-500 transition-colors" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-500 hover:text-[#047A6C] transition-colors" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-[#047A6C] transition-colors" aria-label="Facebook">
+              <a href="https://facebook.com/accessjustice.global" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#1877F2] transition-colors" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>

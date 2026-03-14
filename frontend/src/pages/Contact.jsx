@@ -30,6 +30,8 @@ import {
   Users,
   Briefcase,
   Building2,
+  Instagram,
+  Facebook,
 } from "lucide-react";
 
 const Contact = () => {
@@ -69,18 +71,21 @@ const Contact = () => {
       title: "Email",
       value: "info@accessjustice.global",
       description: "For general inquiries",
+      href: "mailto:info@accessjustice.global",
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Live Chat",
-      value: "Available 24/7",
-      description: "Use our AI Assistant",
+      icon: <Phone className="w-6 h-6" />,
+      title: "WhatsApp",
+      value: "+234 811 444 5557",
+      description: "Chat with us directly",
+      href: "https://wa.me/2348114445557",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Global",
       value: "Worldwide Operations",
       description: "Serving communities globally",
+      href: null,
     },
   ];
 
@@ -168,19 +173,51 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="py-12 bg-white border-b border-gray-100" data-testid="contact-methods">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {contactMethods.map((method, index) => (
-              <div key={index} className="flex items-start gap-4 p-6 bg-[#F8FAFC] rounded-xl" data-testid={`contact-method-${index}`}>
-                <div className="w-12 h-12 bg-[#E0F2F1] text-[#047A6C] rounded-xl flex items-center justify-center flex-shrink-0">
-                  {method.icon}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {contactMethods.map((method, index) => {
+              const content = (
+                <div className={`flex items-start gap-4 p-6 bg-[#F8FAFC] rounded-xl ${method.href ? 'hover:bg-[#E0F2F1] transition-colors cursor-pointer' : ''}`} data-testid={`contact-method-${index}`}>
+                  <div className="w-12 h-12 bg-[#E0F2F1] text-[#047A6C] rounded-xl flex items-center justify-center flex-shrink-0">
+                    {method.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#0A0A0A]">{method.title}</h3>
+                    <p className="text-[#047A6C] font-medium">{method.value}</p>
+                    <p className="text-gray-500 text-sm">{method.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-[#0A0A0A]">{method.title}</h3>
-                  <p className="text-[#047A6C] font-medium">{method.value}</p>
-                  <p className="text-gray-500 text-sm">{method.description}</p>
-                </div>
-              </div>
-            ))}
+              );
+              return method.href ? (
+                <a key={index} href={method.href} target={method.href.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
+                  {content}
+                </a>
+              ) : (
+                <div key={index}>{content}</div>
+              );
+            })}
+          </div>
+          
+          {/* Social Media Links */}
+          <div className="flex items-center justify-center gap-6">
+            <span className="text-gray-500 text-sm">Follow us:</span>
+            <a 
+              href="https://instagram.com/accessjustice.global" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-xl flex items-center justify-center text-white hover:scale-105 transition-transform"
+              data-testid="instagram-link"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a 
+              href="https://facebook.com/accessjustice.global" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 bg-[#1877F2] rounded-xl flex items-center justify-center text-white hover:scale-105 transition-transform"
+              data-testid="facebook-link"
+            >
+              <Facebook className="w-6 h-6" />
+            </a>
           </div>
         </div>
       </section>
