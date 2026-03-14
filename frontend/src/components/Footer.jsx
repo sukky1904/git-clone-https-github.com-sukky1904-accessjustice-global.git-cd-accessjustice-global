@@ -29,12 +29,17 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Brand Column */}
             <div className="lg:col-span-2">
-              <Link to="/" className="inline-block mb-4 bg-white rounded-lg p-2" data-testid="footer-logo">
-                <img 
-                  src="https://customer-assets.emergentagent.com/job_ai-legal-test/artifacts/289e0s1q_justice%20ai%20logo.png" 
-                  alt="AccessJustice.Global Logo" 
-                  className="h-14 w-auto"
-                />
+              <Link to="/" className="flex items-center gap-3 mb-4" data-testid="footer-logo">
+                <div className="bg-white rounded-lg p-2">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_ai-legal-test/artifacts/trhkf0y7_justice%20ai%20logo.png" 
+                    alt="AccessJustice Logo" 
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <span className="font-['Playfair_Display'] text-2xl font-bold text-white">
+                  Access <span className="text-[#047A6C]">Justice</span>
+                </span>
               </Link>
               <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
                 Justice for Everyone. Designed for Humanity. Using AI to make legal guidance accessible, 

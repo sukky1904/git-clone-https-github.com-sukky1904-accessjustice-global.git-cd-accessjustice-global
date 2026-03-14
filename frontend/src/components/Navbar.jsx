@@ -37,12 +37,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2" data-testid="logo-link">
+          <Link to="/" className="flex items-center gap-3" data-testid="logo-link">
             <img 
-              src="https://customer-assets.emergentagent.com/job_ai-legal-test/artifacts/289e0s1q_justice%20ai%20logo.png" 
-              alt="AccessJustice.Global Logo" 
-              className="h-14 w-auto"
+              src="https://customer-assets.emergentagent.com/job_ai-legal-test/artifacts/trhkf0y7_justice%20ai%20logo.png" 
+              alt="AccessJustice Logo" 
+              className="h-12 w-auto"
             />
+            <span className="font-['Playfair_Display'] text-2xl font-bold text-[#0A0A0A] hidden sm:block">
+              Access <span className="text-[#047A6C]">Justice</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
