@@ -13,7 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { Scale, Menu, X, User, LogOut, LayoutDashboard, ChevronDown } from "lucide-react";
+import { Menu, X, User, LogOut, LayoutDashboard, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,13 +38,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2" data-testid="logo-link">
-            <div className="w-10 h-10 bg-[#047A6C] rounded-lg flex items-center justify-center">
-              <Scale className="w-6 h-6 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-['Playfair_Display'] text-xl font-bold text-[#0A0A0A]">AccessJustice</span>
-              <span className="text-[#047A6C] text-sm">.Global</span>
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_ai-legal-test/artifacts/289e0s1q_justice%20ai%20logo.png" 
+              alt="AccessJustice.Global Logo" 
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

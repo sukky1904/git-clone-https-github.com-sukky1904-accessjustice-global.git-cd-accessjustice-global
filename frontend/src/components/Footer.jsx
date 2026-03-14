@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, Mail, MapPin, Phone, Globe, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Mail, MapPin, Globe, Twitter, Linkedin, Facebook } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,14 +29,12 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Brand Column */}
             <div className="lg:col-span-2">
-              <Link to="/" className="flex items-center gap-2 mb-4" data-testid="footer-logo">
-                <div className="w-10 h-10 bg-[#047A6C] rounded-lg flex items-center justify-center">
-                  <Scale className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <span className="font-['Playfair_Display'] text-xl font-bold text-white">AccessJustice</span>
-                  <span className="text-[#047A6C] text-sm">.Global</span>
-                </div>
+              <Link to="/" className="inline-block mb-4 bg-white rounded-lg p-2" data-testid="footer-logo">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_ai-legal-test/artifacts/289e0s1q_justice%20ai%20logo.png" 
+                  alt="AccessJustice.Global Logo" 
+                  className="h-14 w-auto"
+                />
               </Link>
               <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
                 Justice for Everyone. Designed for Humanity. Using AI to make legal guidance accessible, 
