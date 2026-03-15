@@ -30,31 +30,16 @@
         <title>Access Justice | Justice for Everyone</title>
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <!-- Emergent script removed -->
-        <style>
-            #emergent-badge, 
-            a[href*="emergent.sh"],
-            [id*="emergent"],
-            a[href*="utm_source=emergent"] { 
+        </style>
+        <script>
+            // Also run periodically in case it's injected late
+             a[href*="utm_source=emergent"] { 
                 display: none !important; 
                 visibility: hidden !important;
                 opacity: 0 !important;
                 pointer-events: none !important;
                 position: absolute !important;
-                left: -9999px !important;
-            }
-        </style>
-        <script>
-            // Remove Emergent badge on load
-            function removeEmergentBadge() {
-                var badge = document.getElementById('emergent-badge');
-                if (badge) badge.remove();
-                var links = document.querySelectorAll('a[href*="emergent"]');
-                links.forEach(function(link) { link.remove(); });
-            }
-            document.addEventListener('DOMContentLoaded', removeEmergentBadge);
-            window.addEventListener('load', removeEmergentBadge);
-            // Also run periodically in case it's injected late
-            setInterval(removeEmergentBadge, 500);
+
         </script>
     </head>
     <body>
